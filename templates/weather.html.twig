@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Weather Father</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body { background-color: #515157; }
+    </style>
+</head>
+<body>
+    <!-- As a heading -->
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1">Weather Father</span>
+    </nav>
+
+
+    <div class="card" className="main" style="width: 50rem; padding: 60px;
+                                        padding-left: 60px; padding-right: 60px;
+                                        margin-left: 330px; margin-top: 80px;
+                                        font-size: 30px;
+                                        ">
+        <div class="card-body">
+            <h2 class="card-title">{{ city }} Weather Status</h2>
+            <div class="time">
+                <div>{{ date_currentTime }}</div>
+                <div>{{ date_currentDate }}</div>
+                <div>{{ weather_description }}</div>
+            </div>
+            <hr/>
+            <div class="weather-forecast">
+                <img
+                    src="http://openweathermap.org/img/w/{{ icon }}.png"
+                    class="weather-icon" /> {{ temp_max }}°C &emsp; <span
+                    class="min-temperature" style="color: #848f94;">{{ temp_min }}°C</span>
+            </div>
+            <hr/>
+            <div class="time">
+                <div>Humidity: {{ humidity }} %</div>
+                <div>Wind: {{ wind_speed }} km/h</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
