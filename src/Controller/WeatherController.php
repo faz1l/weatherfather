@@ -22,7 +22,7 @@
             $city_json = json_decode($city_str); // Decode the JSON
             foreach ($city_json as $item) {
                 if ($item->name == $user_city) { // Compare user's city with listed cities
-                    $found_city_id = $item->id; // Determine the user's citie id
+                    $found_city_id = $item->id; // Determine the user's city id
                 }
             }
 
